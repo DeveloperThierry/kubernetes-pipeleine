@@ -14,12 +14,16 @@
     pkgs.kubectl
     pkgs.minikube
     pkgs.docker
+    pkgs.kind
+    pkgs.k3d
   ];
 
   services.docker.enable = true;
 
   # Sets environment variables in the workspace
-  env = {};
+  env = {
+   
+  };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
@@ -52,8 +56,7 @@
       };
       # Runs when the workspace is (re)started
       onStart = {
-        # Example: start a background task to watch and re-build backend code
-        # watch-backend = "npm run watch-backend";
+       
       };
     };
   };
